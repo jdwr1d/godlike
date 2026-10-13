@@ -6,3 +6,6 @@
 - 2026-10-13: Placeholder values chosen by Claude on the owner's request (the prompt's own examples). All are changeable and none is verified:
   BRAND_NAME=Fachada · APP_SLUG=fachada-studio · PRODUCTION_URL=https://fachada.studio · EMAIL_FROM="Fachada <login@fachada.studio>" · SUPPORT_EMAIL=soporte@fachada.studio · CREDIT_MARKUP=2.5 · PRIMARY_MARKET="Costa Rica + LATAM" · DEFAULT_LOCALE=es.
   Not checked: domain availability/ownership, Resend domain verification, trademark. Verify before launch.
+- 2026-10-13: Phase 1 scaffold started WITHOUT the Higgsfield `app-templates` registry (unreachable). Plain `create-next-app` (Next 16.4, React 19, Tailwind v4, TS strict) in `fachada-studio/`. Template UI (Quanta tokens, shadcn components, generation/*) must be merged in once the host is reachable.
+- 2026-10-13: Disabled `cacheComponents`/`partialPrefetching` (create-next-app defaults) because locale is read from the NEXT_LOCALE cookie in the root layout, which is dynamic. Revisit if the template requires them.
+- 2026-10-13: i18n = next-intl with cookie locale (no URL prefix), es default.
